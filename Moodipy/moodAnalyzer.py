@@ -40,7 +40,7 @@ def find_mood(entry):
 
     # First we go through the emotions file and compare the words there with the words in our journal entry
     potential_emotions = []
-    with open('emotions.txt') as file:
+    with open('Moodipy/emotions.txt') as file:
         for line in file:
             stripped_line = line.replace('\n', '').replace(',', '').replace('\'', '').replace(' ', '').strip()
             word, emotion = stripped_line.split(':')
