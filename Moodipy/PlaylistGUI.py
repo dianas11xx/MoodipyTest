@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from UserSummary import Person
+from Moodipy.UserSummary import Person
 from screeninfo import get_monitors
-from PlaylistGenerator import generatePlaylist
+from Moodipy.PlaylistGenerator import generatePlaylist
 
 class PlaylistPg(QMainWindow):
     def __init__(self):
@@ -41,8 +41,6 @@ class PlaylistPg(QMainWindow):
         scrollBar = QScrollBar(self)
         listWidget.setVerticalScrollBar(scrollBar)
         listWidget.setStyleSheet("background-color:rgba(208, 255, 244, 255); ")
-    #==> Test Tracks, replace with PlaylistGenerator tracks
-        #tracks = {'Track 1': 'Artist1', 'Track 2': 'Artist2', 'Track 3': 'Artist 3', 'Track 4': 'Artist 4', 'Track 5': 'Artist 5', 'Track 6': 'Artist 6', 'Track 7': 'Artist 7', 'Track 8': 'Artist 8', 'Track 9': 'Artist 9', 'Track 10': 'Artist 10', 'Track 11': 'Artist 11', 'Track 12': 'Artist 12'}
 
         tracks = Person.tracks
         # Add tracks to list widget
@@ -60,7 +58,8 @@ class PlaylistPg(QMainWindow):
             num = num + 1
     # Add another Mood
     def on_click(self):
-        from MoodAnalyzerGUI import MoodAnalyzerPg
+        from Moodipy.MoodAnalyzerGUI import MoodAnalyzerPg
         self.nextPg = MoodAnalyzerPg()
         self.nextPg.show()
         self.hide()
+
