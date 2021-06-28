@@ -1,5 +1,5 @@
 from SpotifyAuthorization import Authorization
-from UserSummary import Person
+from Moodipy.UserSummary import Person
 import random
 
 
@@ -9,6 +9,7 @@ def generatePlaylist():
     Step 0: Get Users Liked Songs
     """
     user, client = Authorization()
+    print("checkpoint 0")
 
     user_songs = user.get_user_saved_tracks()
 
@@ -55,5 +56,3 @@ def generatePlaylist():
     print("checkpoint 4")
 
     return tracks
-
-
