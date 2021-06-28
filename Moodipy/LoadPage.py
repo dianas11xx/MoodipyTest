@@ -1,10 +1,9 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from UserSummary import Person
-from PlaylistGUI import PlaylistPg
+from Moodipy.UserSummary import Person
+from Moodipy.PlaylistGUI import PlaylistPg
 from screeninfo import get_monitors
-#from PlaylistGenerator import generatePlaylist
 import time
 
 class LoadPg(QMainWindow):
@@ -50,34 +49,8 @@ class LoadPg(QMainWindow):
         self.hide()
 
 
-       # self.gifLabel = QLabel(self)
-      #  self.gif = QMovie('imgs/loadingGIF.gif')
-      #  self.gifLabel.setMovie(self.gif)
-       # self.gifLabel.setGeometry(self.sw*400, self.sh*420, self.sw*100, self.sh*100)
-
-      #  self.startBtn = QPushButton("Start", self)
-      #  self.startBtn.move(self.sw * 453, self.sh * 560)
-      #  self.startBtn.clicked.connect(self.startLoad())
-
-  #  def startLoad(self):
-  #      self.gif.start()
-   #     self.nextPg = PlaylistPg()
-  #      self.gif.stop()
-  #      self.nextPg.show()
-  #      self.hide()
-
-
     def paintEvent(self, event):
         paint = QPainter(self)
         paint.setPen(QPen(Qt.white, 5, Qt.SolidLine))
         paint.setBrush(QBrush(Qt.white, Qt.SolidPattern))
         paint.drawEllipse(self.sw*270, self.sh*70, self.sw*450, self.sh*450)
-
-    """    def startProgressBar(self):
-            for i in range(100):
-                time.sleep(0.05)
-                self.loadingBar.setValue(i)
-
-            self.nextPg = PlaylistPg()
-            self.nextPg.show()
-            self.hide()"""
