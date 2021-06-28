@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import *
-from UserSummary import Person
-from MoodAnalyzerGUI import MoodAnalyzerPg
-from SpotifyAuthorization import Authorization
+from Moodipy.UserSummary import Person
+from Moodipy.MoodAnalyzerGUI import MoodAnalyzerPg
+from Moodipy.SpotifyAuthorization import Authorization
 from screeninfo import get_monitors
 
 
@@ -53,7 +53,5 @@ class UserLoginPG(QMainWindow):
 
     def pop_up(self):
         msg = QMessageBox.question(self, 'Invalid Username', 'Please enter a valid username', QMessageBox.Ok)
-
-
 
 
