@@ -1,4 +1,4 @@
-from SpotifyAuthorization import Authorization
+from Moodipy.SpotifyAuthorization import Authorization
 from Moodipy.UserSummary import Person
 import random
 
