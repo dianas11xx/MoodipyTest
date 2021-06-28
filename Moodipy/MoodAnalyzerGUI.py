@@ -2,9 +2,9 @@ from screeninfo import get_monitors
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from moodAnalyzer import find_mood
-from UserSummary import Person
-from LoadPage import LoadPg
+from Moodipy.moodAnalyzer import find_mood
+from Moodipy.UserSummary import Person
+from Moodipy.LoadPage import LoadPg
 
 class MoodAnalyzerPg(QMainWindow):
     def __init__(self):
@@ -105,4 +105,3 @@ class MoodAnalyzerPg(QMainWindow):
         self.nextPg = LoadPg()
         self.nextPg.show()
         self.hide()
-
