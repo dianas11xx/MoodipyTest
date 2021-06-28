@@ -66,7 +66,7 @@ class MoodAnalyzerPg(QMainWindow):
         # Mood image
         self.mood_img = QLabel(self)
         self.mood_img.setGeometry(self.sw*690, self.sh*200, self.sw*130, self.sh*130)
-        self.mood_img.setStyleSheet("border-image : url(imgs/awful.jpeg);background-color: #99acff;")
+        self.mood_img.setStyleSheet("border-image : url(Moodipy/imgs/awful.jpeg);background-color: #99acff;")
         # Mood label
         self.mood = QLabel('awful', self)
         self.mood.setGeometry(self.sw*740, self.sh*350, self.sw*50, self.sh*30)
@@ -81,7 +81,7 @@ class MoodAnalyzerPg(QMainWindow):
 
     def updateMood(self, value):
         moods = ["awful", "bad", "okay", "happy", "excited", "love"]
-        self.mood_img.setStyleSheet("border-image : url(imgs/%s.jpeg);" % moods[value])
+        self.mood_img.setStyleSheet("border-image : url(Moodipy/imgs/%s.jpeg);" % moods[value])
         self.mood.setText(moods[value])
 
     def on_click(self):
