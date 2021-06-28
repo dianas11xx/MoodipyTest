@@ -1,7 +1,7 @@
 import requests.exceptions
 import spotipy
-from Spotipy import Spotify, User
-from UserSummary import Person
+from Moodipy.Spotipy import Spotify, User
+from Moodipy.UserSummary import Person
 
 
 # Spotify Web API authorization
@@ -13,11 +13,10 @@ def Authorization():
     redirect_uri = "http://localhost:8080"
 
     # User Environent Variables
-    #user_id = "igjsqvqpbxeuhoxlgvplj68qf"
-    #user_id = "xxqueendianaxx"
+
     user_id = Person.userID
 
-    scope = "user-library-read  playlist-modify-public"
+    scope = "user-library-read  playlist-modify-public user-top-read user-follow-read"
 
     # INTERFACE
     try:
@@ -28,5 +27,3 @@ def Authorization():
     except (spotipy.exceptions.SpotifyException, requests.exceptions.HTTPError,spotipy.oauth2.SpotifyOauthError):
         return None
 
-#if __name__=="__main__":
-  #  print(Authorization())
