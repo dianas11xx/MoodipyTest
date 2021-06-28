@@ -1,3 +1,4 @@
-include Moodipy/emotions.txt
-recursive-include Moodipy/imgs *
+global-include Moodipy/emotions.txt
+global-include Moodipy/imgs *
+global-include Moodipy/imgs/arrow.png
 
